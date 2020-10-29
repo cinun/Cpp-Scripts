@@ -11,15 +11,21 @@ public class PlayerHand {
 
 
   public void player_hand(){
-
+      
 
   //This works
+    /**
+    1. Make an array, that stores 4 values, initialize all index to 0
+    2. Inside the for, if (color == red)
+    array[red] += getRank()
+    
+    
+    **/
+    
     for(int j = 0; j < 7; j++) {
       CardUno deck1 = new CardUno(CardUno.Ranks[j % CardUno.Ranks.length], CardUno.Colors[j % CardUno.Colors.length]);
       hand[j] = deck1;
       System.out.println(hand[j].getRank() + hand[j].getColor());
-
-
     }
 
     System.out.println();
@@ -29,7 +35,7 @@ public class PlayerHand {
     for (int j = 0; j < 7; j++){
 
       if (CardUno.Colors[j% CardUno.Colors.length] == "BLUE")
-        System.out.println(Workout[0]);
+        System.out.println(Workout[0], " x ", array[0]); //array[0]
       if (CardUno.Colors[j% CardUno.Colors.length] == "YELLOW")
         System.out.println(Workout[1]);
       if (CardUno.Colors[j% CardUno.Colors.length] == "RED")
